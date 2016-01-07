@@ -1,12 +1,27 @@
 # re-mdl
 
-Yet another library of reusable UI components for Reagent
-
 [![Clojars Project](http://clojars.org/com.yetanalytics/re-mdl/latest-version.svg)](http://clojars.org/com.yetanalytics/re-mdl)
 
 ## Overview
 
-Re-mdl gives you reusable components for use with Google's [Material Design Lite](http://www.getmdl.io/) in the style of [re-com](https://github.com/Day8/re-com). Re-mdl is in active development, and is not ready for use!!!
+re-mdl gives you reusable components for use with Google's [Material Design Lite](http://www.getmdl.io/) 
+in the style of [re-com](https://github.com/Day8/re-com). re-mdl is in active development, and is 
+may not ready for use in production!!!
+
+## Usage
+
+```clojure
+(require '[re-mdl.core :as mdl])
+
+(defn button-component []
+  [mdl/button
+    :on-click #(js/alert "Clicked!")
+    :ripple-effect? true
+    :label "Ripple Button"])
+```
+
+Most MDL components can be created via the ```re-mdl.core``` namespace.
+For better usage examples, please see *src-dev/re_mdl/demo/cljs*.
 
 ## Dev Setup
 
@@ -41,6 +56,12 @@ Using [phantomjs](http://phantomjs.org/):
     lein doo phantom test once
 
 Thanks, [gadfly361](https://github.com/gadfly361)!
+
+## Documentation
+
+Using [codox](https://github.com/weavejester/codox)
+
+    lein codox
 
 ## License
 

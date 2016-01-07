@@ -1,5 +1,5 @@
 (defproject com.yetanalytics/re-mdl "0.1.1-SNAPSHOT"
-  :description "Yet another library of reusable UI components for Reagent"
+  :description "Provides a lightweight interface between Material Design Lite and Reagent."
   :url "https://github.com/yetanalytics/re-mdl.git"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -15,11 +15,16 @@
 
   :plugins [[lein-cljsbuild "1.1.1"]
             [lein-figwheel "0.5.0-2"]
-            [lein-doo "0.1.6"]]
+            [lein-doo "0.1.6"]
+            [lein-codox "0.9.1"]]
 
   :source-paths ["src/cljc"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
+
+  :codox {:metadata     {:doc        "FIXME: write docs"
+                         :doc/format :markdown}
+          :output-path  "codox"}
 
   :cljsbuild {
     :builds [{:id "dev"
