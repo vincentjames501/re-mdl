@@ -29,4 +29,17 @@
      label)])
 
 (def button
+  "Adds a variation of a Material Design button."
   (wrap-mdl button*))
+
+(def flat-button
+  "Adds a Material Design flat button"
+  (wrap-mdl (partial button* :ripple-effect? true)))
+
+(def raised-button
+  "Adds a Material Design raised button"
+  (wrap-mdl (partial button* :raised? true :ripple-effect? true)))
+
+(def floating-action-button
+  "Adds a Material Design floating action button"
+  (wrap-mdl (partial button* :fab? true :ripple-effect? true)))

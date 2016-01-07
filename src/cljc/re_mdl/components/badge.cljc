@@ -24,3 +24,7 @@
              badge-label (assoc :data-badge badge-label))
      attr)
    child])
+
+(def icon-badge
+  "Adds a variation of a badge that is an icon badge"
+  (partial badge :icon? true))
